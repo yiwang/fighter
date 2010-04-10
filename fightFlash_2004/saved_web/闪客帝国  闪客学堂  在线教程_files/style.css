@@ -1,0 +1,81 @@
+BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: "宋体", "Arial Narrow", "Times New Roman"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "宋体", "Arial Narrow", "Times New Roman"
+}
+A:link {
+	COLOR: #004a80; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #999999; TEXT-DECORATION: none
+}
+A.b:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.b:visited {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.b:hover {
+	FONT-SIZE: 12px; COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.c:link {
+	FONT-SIZE: 12px; COLOR: #8055ff; TEXT-DECORATION: none
+}
+A.c:visited {
+	FONT-SIZE: 12px; COLOR: #8055ff; TEXT-DECORATION: none
+}
+A.c:hover {
+	FONT-SIZE: 12px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+.lineheight {
+	LINE-HEIGHT: 16pt
+}
+.textbox {
+	BORDER-RIGHT: #000000 1px inset; BORDER-TOP: #000000 1px inset; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px inset; BORDER-BOTTOM: #000000 1px inset; FONT-FAMILY: "宋体"
+}
+.textbox1 {
+	BORDER-RIGHT: #333333 1px inset; BORDER-TOP: #333333 1px inset; FONT-SIZE: 9pt; BORDER-LEFT: #333333 1px inset; BORDER-BOTTOM: #333333 1px inset; FONT-FAMILY: "宋体"
+}
+.c {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 120%; FONT-FAMILY: "宋体", "Arial"
+}
+.f1 {
+	FONT-SIZE: 11pt; LINE-HEIGHT: 140%; FONT-FAMILY: "宋体"
+}
+.cc {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 160%; FONT-FAMILY: "宋体"
+}
+.myinput {
+	BORDER-RIGHT: #919191 1px solid; BORDER-TOP: #919191 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #919191 1px solid; BORDER-BOTTOM: #919191 1px solid; FONT-FAMILY: "宋体", "Arial"; HEIGHT: 17px; BACKGROUND-COLOR: #ffffff
+}
+.myinputtext {
+	BORDER-RIGHT: #16477c 1px solid; BORDER-TOP: #16477c 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #16477c 1px solid; BORDER-BOTTOM: #16477c 1px solid; BACKGROUND-COLOR: #ffffff
+}
+A.w:link {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.w:visited {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.w:hover {
+	FONT-SIZE: 12px; COLOR: #0e5d88; TEXT-DECORATION: underline
+}
+.game_rq {
+	FONT-SIZE: 9pt; COLOR: #7b7b7b; FONT-FAMILY: "宋体"
+}
+.game_rt {
+	FONT-SIZE: 9pt; COLOR: #4d4e4d; LINE-HEIGHT: 120%; FONT-FAMILY: "宋体"
+}
+.myinput_big {
+	BORDER-RIGHT: #919191 1px solid; BORDER-TOP: #919191 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #919191 1px solid; CURSOR: hand; BORDER-BOTTOM: #919191 1px solid; FONT-FAMILY: "宋体", "Arial"; BACKGROUND-COLOR: #ffffff
+}
+.myinput_readonly {
+	BORDER-RIGHT: #919191 1px solid; BORDER-TOP: #919191 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #919191 1px solid; CURSOR: hand; COLOR: #bcb8b9; BORDER-BOTTOM: #919191 1px solid; FONT-FAMILY: "宋体", "Arial"; HEIGHT: 17px; BACKGROUND-COLOR: #ffffff
+}
+.submit {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
