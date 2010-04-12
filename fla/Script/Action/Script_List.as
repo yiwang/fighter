@@ -1,0 +1,199 @@
+﻿#initclip 80
+///////////////////////////////////////////////////////////
+roleActionProperty={JS_NC_fist:{frame:{}},
+					DNY_NC_fist:{}}
+//////////////////////////////////////////////////
+powerList=[{power:PowerSimple,clip:"skyLight"},
+		   {power:PowerSimple,clip:"word"},
+		   {power:PowerSimple,clip:"rope"},
+		   {power:PowerQuake,clip:"bigHammer"},
+		   {power:MedPower,clip:"hammer"}
+		   ]
+//0：地面//1：上跳//2：前跳//-2：后跳//flagUpArray
+//
+//
+//////////////////////////////////////////////////
+DLY_NC=DLY={hit:{
+fist:{frame:5,degree:9,flagUpArray:[0,1,2],disX:100},
+upFist:{frame:5,degree:9,flagUpArray:[0,1,2],disX:100},
+fUpFist:{frame:5,degree:9,flagUpArray:[0,1,2,-2],disX:100},
+bUpFist:{frame:5,degree:9,flagUpArray:[0,1,2],disX:100}
+},actPower:{
+back_fist:{frameArray:[3],flagUpArray:[0],media:null,power:"rope"},//A
+back_front_fist:{frameArray:[3,8,14],degree:10,flagUpArray:[0],disX:100,isStop:true,media:null,power:null},//B
+down_front_fist:{}//C
+},power:{
+rope:{frameArray:[4,9],degree:12,flagUpArray:[0,1,2,-2],disX:100,isStop:true}
+}}
+//////////////////////////////////////////////////
+JS_NC=JS={hit:{
+fist:{frame:5,degree:7,flagUpArray:[0,1,2],disX:100},
+upFist:{frame:5,degree:7,flagUpArray:[0,1,2],disX:100},
+fUpFist:{frame:5,degree:7,flagUpArray:[0,1,2,-2],disX:100},
+bUpFist:{frame:5,degree:7,flagUpArray:[0,1,2],disX:100}
+},actPower:{
+back_fist:{frameArray:[3],flagUpArray:[0,1,2,-2],media:null,power:"skyLight"},//A
+back_front_fist:{frameArray:[3],flagUpArray:[0],media:"hammer",power:"bigHammer",disX:150},//B
+down_front_fist:{frameArray:[3],flagUpArray:[0],media:null,power:"word"}//C
+},power:{
+skyLight:{frameArray:[3],degree:21,flagUpArray:[0,1,2,-2],disX:20},
+bigHammer:{frameArray:[7],degree:43,flagUpArray:[0],disX:80},
+word:{frameArray:[11,26,35,46,54],degree:9,flagUpArray:[0],disX:100,isStop:true}
+}}
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+_stillList=[{action:Still,clip:"_still"},
+		  {action:StillPass,clip:"_pBack"},
+		  {action:StillPass,clip:"_pBRun"},
+		  {action:StillPass,clip:"_pFront"},
+		  {action:StillPass,clip:"_pRun"},
+		  {action:BasicAction,clip:"_pBackBoth"},
+		  {action:StillEnd,clip:"_endVictoryGround"},//祭师胜利地面
+		  {action:StillEnd,clip:"_endVictoryUp"},//祭师胜利空中
+		  {action:StillEnd,clip:"_endFailureGround"},//祭师失败地面
+		  {action:StillEnd,clip:"_endFailureUp"},//祭师失败空中  
+		  {action:StillStart,clip:"_init"}
+		   ]
+_actionList=[{action:ActPower_back_fist,clip:"_powerA"},
+			{action:ActPower_back_front_fist,clip:"_powerB"},
+			{action:ActPower_down_front_fist,clip:"_powerC"},
+			{action:ActUpFist,clip:"_upFist"},
+			{action:ActBUpFist,clip:"_bUpFist"},
+			{action:ActFUpFist,clip:"_fUpFist"},
+			{action:ActBUpL,clip:"_bUpL"},
+			{action:ActFUpL,clip:"_fUpL"},			
+			{action:ActRun,clip:"_run"},			
+			{action:ActBRun,clip:"_bRun"},			
+			{action:ActFist,clip:"_fist"},
+			{action:ActUp,clip:"_up"},
+			{action:ActFront,clip:"_front"},
+			{action:ActBack,clip:"_back"}			
+			//{action:ActDown,clip:"down"}
+			]
+_passList=[{action:Pass,clip:"_pDef"},
+		  {action:Pass,clip:"_pDefBack"},
+		  {action:Pass,clip:"_pBeenHit"},
+		  {action:Pass,clip:"_pBeenHitBack"},
+		  {action:Pass,clip:"_pDown"},
+		  {action:PassUpDown,clip:"_pUpDown"}		  
+		 ]
+///////////////////////////////////////////////////////////
+/*
+//ActionMap Class
+function ActionMap(){
+	this.action;
+	this.clip;
+}
+
+JS_NC_stillList=[{action:Still,clip:"JS_NC_still"},
+		  {action:StillPass,clip:"JS_NC_pBack"},
+		  {action:StillPass,clip:"JS_NC_pBRun"},
+		  {action:StillPass,clip:"JS_NC_pFront"},
+		  {action:StillPass,clip:"JS_NC_pRun"},
+		  {action:BasicAction,clip:"JS_NC_pBackBoth"},
+		  {action:StillEnd,clip:"JS_NC_endVictoryGround"},//祭师胜利地面
+		  {action:StillEnd,clip:"JS_NC_endVictoryUp"},//祭师胜利空中
+		  {action:StillEnd,clip:"JS_NC_endFailureGround"},//祭师失败地面
+		  {action:StillEnd,clip:"JS_NC_endFailureUp"},//祭师失败空中  
+		  {action:StillStart,clip:"JS_NC_init"}
+		   ]
+JS_NC_actionList=[{action:ActFist,clip:"JS_NC_fist"},
+			{action:ActUp,clip:"JS_NC_up"},
+			{action:ActFront,clip:"JS_NC_front"},
+			{action:ActRun,clip:"JS_NC_run"},
+			{action:ActBack,clip:"JS_NC_back"},
+			{action:ActBRun,clip:"JS_NC_bRun"},
+			{action:ActUpFist,clip:"JS_NC_upFist"},
+			{action:ActBUpFist,clip:"JS_NC_bUpFist"},
+			{action:ActFUpFist,clip:"JS_NC_fUpFist"},
+			{action:ActBUpL,clip:"JS_NC_bUpL"},
+			{action:ActFUpL,clip:"JS_NC_fUpL"},			
+			{action:ActPower_back_fist,clip:"JS_NC_powerA"},
+			{action:ActPower_back_front_fist,clip:"JS_NC_powerB"},
+			{action:ActPower_down_front_fist,clip:"JS_NC_powerC"}
+			//{action:ActDown,clip:"down"}
+			]
+JS_NC_passList=[{action:Pass,clip:"JS_NC_pDef"},
+		  {action:Pass,clip:"JS_NC_pDefBack"},
+		  {action:Pass,clip:"JS_NC_pBeenHit"},
+		  {action:Pass,clip:"JS_NC_pBeenHitBack"},
+		  {action:Pass,clip:"JS_NC_pDown"},
+		  {action:PassUpDown,clip:"JS_NC_pUpDown"}		  
+		 ]
+//////////////////////////////////////////////////////////////////////////////////////
+//For JS
+JS_stillList=[{action:Still,clip:"JS_still"},//祭师站立
+		  {action:StillPass,clip:"JS_pBack"},//
+		  {action:StillPass,clip:"JS_pBRun"},//
+		  {action:StillPass,clip:"JS_pFront"},//
+		  {action:StillPass,clip:"JS_pRun"},//
+		  {action:BasicAction,clip:"JS_pBackBoth"},//
+		  {action:StillEnd,clip:"JS_endVictoryGround"},//祭师胜利地面
+		  {action:StillEnd,clip:"JS_endVictoryUp"},//祭师胜利空中
+		  {action:StillEnd,clip:"JS_endFailureGround"},//祭师失败地面
+		  {action:StillEnd,clip:"JS_endFailureUp"},//祭师失败空中  
+		  {action:StillStart,clip:"JS_init"}//祭师开始动作
+		   ]
+JS_actionList=[{action:ActFist,clip:"JS_fist"},//祭师普通攻击
+			{action:ActUp,clip:"JS_up"},//祭师跳跃
+			{action:ActFront,clip:"JS_front"},//祭师前走
+			{action:ActRun,clip:"JS_run"},//祭师前跑
+			{action:ActBack,clip:"JS_back"},//祭师后移
+			{action:ActBRun,clip:"JS_bRun"},//祭师快速后移
+			{action:ActUpFist,clip:"JS_upFist"},//祭师跳跃攻击
+			{action:ActBUpFist,clip:"JS_bUpFist"},//祭师后跳攻击
+			{action:ActFUpFist,clip:"JS_fUpFist"},//祭师前跳攻击
+			{action:ActBUpL,clip:"JS_bUpL"},//祭师后跳远
+			{action:ActFUpL,clip:"JS_fUpL"},//祭师前跳远
+			{action:ActPower_back_fist,clip:"JS_powerA"},//祭师施法1
+			{action:ActPower_back_front_fist,clip:"JS_powerB"},//祭师施法2
+			{action:ActPower_down_front_fist,clip:"JS_powerC"}
+			//{action:ActDown,clip:"down"}
+			]
+JS_passList=[{action:Pass,clip:"JS_pDef"},//祭师挡
+		  {action:Pass,clip:"JS_pDefBack"},//祭师挡后退
+		  {action:Pass,clip:"JS_pBeenHit"},//祭师挨打
+		  {action:Pass,clip:"JS_pBeenHitBack"},//祭师挨打后退
+		  {action:Pass,clip:"JS_pDown"},//祭师倒地
+		  {action:PassUpDown,clip:"JS_pUpDown"}// 祭师后跳挨打 
+		 ]
+//////////////////////////////////////////////////////////////////////////////////////
+//For DLY
+DLY_NC_stillList=[{action:Still,clip:"DLY_NC_still"},//德鲁伊站立
+		  {action:StillPass,clip:"DLY_NC_pBack"},//
+		  {action:StillPass,clip:"DLY_NC_pBRun"},//
+		  {action:StillPass,clip:"DLY_NC_pFront"},//
+		  {action:StillPass,clip:"DLY_NC_pRun"},//
+		  {action:BasicAction,clip:"DLY_NC_pBackBoth"},//
+		  {action:StillEnd,clip:"DLY_NC_endVictoryGround"},//德鲁伊胜利地面
+		  {action:StillEnd,clip:"DLY_NC_endVictoryUp"},//德鲁伊胜利空中
+		  {action:StillEnd,clip:"DLY_NC_endFailureGround"},//德鲁伊失败地面
+		  {action:StillEnd,clip:"DLY_NC_endFailureUp"},//德鲁伊失败空中  
+		  {action:StillStart,clip:"DLY_NC_init"}//德鲁伊开始动作
+		   ]
+DLY_NC_actionList=[{action:ActFist,clip:"DLY_NC_fist"},//德鲁伊普通攻击
+			{action:ActUp,clip:"DLY_NC_up"},//德鲁伊跳跃
+			{action:ActFront,clip:"DLY_NC_front"},//德鲁伊前走
+			{action:ActRun,clip:"DLY_NC_run"},//德鲁伊前跑
+			{action:ActBack,clip:"DLY_NC_back"},//德鲁伊后移
+			{action:ActBRun,clip:"DLY_NC_bRun"},//德鲁伊快速后移
+			{action:ActUpFist,clip:"DLY_NC_upFist"},//德鲁伊跳跃攻击
+			{action:ActBUpFist,clip:"DLY_NC_bUpFist"},//德鲁伊后跳攻击
+			{action:ActFUpFist,clip:"DLY_NC_fUpFist"},//德鲁伊前跳攻击
+			{action:ActBUpL,clip:"DLY_NC_bUpL"},//德鲁伊后跳远
+			{action:ActFUpL,clip:"DLY_NC_fUpL"},//德鲁伊前跳远
+			{action:ActPower_back_fist,clip:"DLY_NC_powerA"},//德鲁伊施法1
+			{action:ActPower_back_front_fist,clip:"DLY_NC_powerB"},//德鲁伊施法2
+			{action:ActPower_down_front_fist,clip:"DLY_NC_powerC"}
+			//{action:ActDown,clip:"down"}
+			]
+DLY_NC_passList=[{action:Pass,clip:"DLY_NC_pDef"},//德鲁伊挡
+		  {action:Pass,clip:"DLY_NC_pDefBack"},//德鲁伊挡后退
+		  {action:Pass,clip:"DLY_NC_pBeenHit"},//德鲁伊挨打
+		  {action:Pass,clip:"DLY_NC_pBeenHitBack"},//德鲁伊挨打后退
+		  {action:Pass,clip:"DLY_NC_pDown"},//德鲁伊倒地
+		  {action:PassUpDown,clip:"DLY_NC_pUpDown"}// 德鲁伊后跳挨打 
+		 ]
+*/
+#endinitclip

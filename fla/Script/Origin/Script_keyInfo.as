@@ -1,0 +1,348 @@
+﻿#initclip 0
+//KeyMap Class
+function KeyMap(){
+	this.act;
+	this.code;
+}
+keyLeftList=[{act:"up",code:87},//w
+		  {act:"down",code:83},//s
+		  {act:"left",code:65},//a
+		  {act:"right",code:68},//d
+		  {act:"fist",code:72},//h
+		  {act:"Leg",code:85},//u
+		  {act:"s",code:73}]//i
+
+keyRightList=[{act:"up",code:38},//
+		  {act:"down",code:40},//
+		  {act:"left",code:37},//
+		  {act:"right",code:39},//
+		  {act:"fist",code:186},//4,100//;,186
+		  {act:"Leg",code:104},//8
+		  {act:"s",code:105}]//9
+
+keyCPUList=[
+////////////////////////////////////////////////////////easy			
+			[{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			////
+  		  {act:"up",code:0},//
+		  {act:"down",code:1},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"back",code:3},//
+		  {act:"fist",code:4},//
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},		  
+		  {act:"Leg",code:5},//
+  		  {act:"s",code:6},//
+		  ////
+		  {act:"frontup",code:10},
+		  {act:"backup",code:11},
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//		  
+		  ////
+		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+		  {act:"fistbackup",code:21},
+		  {act:"fistup",code:22},
+		  ////
+		  {act:"ActPower_back_fist",code:22},
+  		  {act:"ActPower_back_front_fist",code:23},
+		  {act:"ActPower_down_front_fist",code:24}],
+////////////////////////////////////////////////////////normal
+			[{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			////
+  		  {act:"up",code:0},//
+		  {act:"down",code:1},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"back",code:3},//
+		  {act:"fist",code:4},//
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},		  
+		  {act:"fist",code:4},//
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},		  
+		  {act:"Leg",code:5},//
+  		  {act:"s",code:6},//
+		  ////
+		  {act:"frontup",code:10},
+		  //{act:"backup",code:11},
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//		  
+		  ////
+		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},		  
+		  {act:"fistbackup",code:21},
+		  {act:"fistup",code:22},
+		  ////
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},		  
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},		  
+		  {act:"ActPower_down_front_fist",code:24},
+		  {act:"ActPower_down_front_fist",code:24},
+  		  {act:"ActPower_down_front_fist",code:24}],
+////////////////////////////////////////////////////////difficult
+			[{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			{act:"",code:-1},//
+			////
+  		  {act:"up",code:0},//
+		  {act:"down",code:1},//
+		  {act:"down",code:1},//		  
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//		  
+		  {act:"back",code:3},//
+		  {act:"fist",code:4},//
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},		  
+		  {act:"fist",code:4},//
+  		  {act:"Leg",code:5},//
+  		  {act:"s",code:6},//
+		  ////
+		  {act:"frontup",code:10},
+		  //{act:"backup",code:11},
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  ////
+		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},		  
+		  {act:"fistbackup",code:21},
+		  {act:"fistup",code:22},
+		  {act:"fistup",code:22},		  
+		  ////
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},		  		  
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},		  
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},		
+  		  {act:"ActPower_back_front_fist",code:23},		  
+		  {act:"ActPower_down_front_fist",code:24},
+		  {act:"ActPower_down_front_fist",code:24},		  
+		  {act:"ActPower_down_front_fist",code:24},
+		  {act:"ActPower_down_front_fist",code:24},		  
+  		  {act:"ActPower_down_front_fist",code:24}],
+////////////////////////////////////////////////////////hard
+			[{act:"",code:-1},//
+			{act:"",code:-1},//
+			////
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"front",code:2},//
+		  {act:"fist",code:4},//
+		  {act:"fist",code:4},
+		  {act:"fist",code:4},
+		  {act:"Leg",code:5},//
+  		  {act:"s",code:6},//
+		  ////
+		  //{act:"backup",code:11},
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  {act:"backdown",code:12},//
+		  ////
+		  {act:"fistfrontup",code:20},
+  		  {act:"fistfrontup",code:20},
+		  {act:"fistup",code:22},
+		  {act:"fistup",code:22},		  
+		  ////
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},
+		  {act:"ActPower_back_fist",code:22},		  		  
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},		  
+  		  {act:"ActPower_back_front_fist",code:23},
+  		  {act:"ActPower_back_front_fist",code:23},		
+  		  {act:"ActPower_back_front_fist",code:23},		  
+		  {act:"ActPower_down_front_fist",code:24},
+		  {act:"ActPower_down_front_fist",code:24},		  
+		  {act:"ActPower_down_front_fist",code:24},
+		  {act:"ActPower_down_front_fist",code:24},		  
+  		  {act:"ActPower_down_front_fist",code:24}]			
+		  ]//
+//KeyInfo Class
+function KeyInfo(isCPU,keyList){
+	this.isCPU=isCPU;
+	this.self;
+	this.other;
+	this.isKeyDown=false;
+	this.keyList=keyList;
+	this.atVal;
+	this.keyAct;
+	this.downActList=new Array();
+	this.upActList=new Array();
+	this.downAct;
+	this.upAct;
+	this.itvUpActList;
+	this.itvAct;
+	//exe
+	this.init();	
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.end=function(){
+	//Key.removeListener(this);
+	clearInterval(this.itvDownActList);
+//	if(this.isCPU){
+		clearInterval(this.itvAct);
+//	}
+	delete this.downActList;
+	delete this.upActList;
+	
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.init=function(){
+	//Key.addListener(this);//the former way
+	//this.itvkeyAct=setInterval(this,'chKeyAct',100);//another way
+	//this.itvUpActList=setInterval(this.chActList,100,this.upActList);
+	this.itvDownActList=setInterval(this.chActList,150,this.downActList);//shorten downActList
+	if(this.isCPU){
+		this.keyList=keyCPUList[cfg.difficulty];
+		this.itvAct=setInterval(this,'chActCPU',80);
+	}else{
+		this.itvAct=setInterval(this,'chAct',40);//very important constant//now way
+	}
+	//clearInterval(2);//integer as flag of interval
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.chActCPU=function(){
+	keyAct="";
+	//core of CPU operation
+	b=this.keyList;
+	c=(b.length-1)*Math.random();
+	keyAct=b[Math.round(c)].act;
+	////
+	if(keyAct!=""){
+		this.keyAct=keyAct;	
+		this.downActList.push(keyAct);
+		//trace("ACT____"+this.self.depth +"____"+ this.downActList.toString());
+		game.keyAction(this.self,this.other);
+	}
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.chAct=function(){
+	keyAct="";	
+	for(keyMap in this.keyList){
+		if(Key.isDown(this.keyList[keyMap].code)){
+			act=this.actToAct(this.keyList[keyMap].act);
+			keyAct+=act;
+		}		
+	}	
+	if(keyAct!=""){
+		this.keyAct=keyAct;	
+		this.downActList.push(keyAct);
+		//trace("ACT____"+this.self.depth +"____"+ this.downActList.toString());
+		game.keyAction(this.self,this.other);
+	}
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.chActList=function(actList){
+	l=actList.length;
+	if(l>3){
+		actList.splice(0,l-3);
+	}
+	if(Math.random()<0.4){
+		actList.shift();
+	}
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.onKeyDown=function(){
+	act=this.codeToAct(Key.getCode(),this.keyList);
+	if(act!=null){
+		this.isKeyDown=true;
+		act=this.actToAct(act);
+		this.downAct=act;						 
+		this.downActList.push(act);
+		game.keyAction(this.self);
+		//consider the other role
+		if(this.other.keyInfo.isKeyDown){
+			//Key.removeListener(this.other.keyInfo);
+			//Key.addListener(this.other.keyInfo);//can't help
+			this.other.keyInfo.downActList.push(this.other.keyInfo.downAct);
+			game.keyAction(this.other);
+		}//trace(this.downActList);
+	}
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.onKeyUp=function(){
+	act=this.codeToAct(Key.getCode(),this.keyList);
+	if(act!=null){
+		this.isKeyDown=false;
+		act=this.actToAct(act);
+		this.upAct=act;
+		this.upActList.push(act);
+		//consider the other role
+		if(this.other.keyInfo.isKeyDown){//consider the other role
+			this.other.keyInfo.downActList.push(this.other.keyInfo.downAct);
+			game.keyAction(this.other);
+		}
+		//trace(this.downActList);		
+		//game.keyAction(this);
+		//trace(this.upActList);
+	}
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.codeToAct=function(code,keyList){
+	for(keyMap in keyList){
+		if(code==keyList[keyMap].code){
+			return keyList[keyMap].act;
+		}
+	}
+	return null;
+}
+////////////////////////////////////////////////////////////////
+KeyInfo.prototype.actToAct=function(act){
+	if(act=="left"&&this.atVal==1){
+		act="back";
+	}
+	if(act=="left"&&this.atVal==-1){
+		act="front";
+	}
+	if(act=="right"&&this.atVal==1){
+		act="front";
+	}
+	if(act=="right"&&this.atVal==-1){
+		act="back";
+	}
+	return act;
+}
+#endinitclip
